@@ -9,7 +9,7 @@ const App = () => {
   const [arr, setArr] = useState([]);
   const [openedCard1, setOpenedCard1] = useState({});
   const [openedCard2, setOpenedCard2] = useState({});
-  const [isWinner, setIsWinner] = useState(false);
+  const [openedCards, setOpenedCards] = useState([]);
 
   useEffect(() => {
     setRandom(shuffle(random))
@@ -18,15 +18,7 @@ const App = () => {
 
   useEffect(() => {
     setArr(random)
-    console.log('wdef')
   }, [random])
-
-  // useEffect(() => {
-  //   console.log('wdef')
-  //   const arrCards = [...arr]
-  //   const closedCards = arrCards.filter(card => card.isOpened = false);
-  //   if (!closedCards) setIsWinner(true)
-  // }, [arr])
 
   useEffect(() => {
     if (!openedCard1.id || !openedCard2.id) return
@@ -59,6 +51,8 @@ const App = () => {
       })
 
       setArr(arrCards)
+    } else {
+      setOpenedCards([...openedCards, openedCard1.id, openedCard2.id])
     }
   }
 
@@ -68,21 +62,24 @@ const App = () => {
       card.isOpened = false
     })
     setArr(shuffle(arrCards))
+    setOpenedCards([])
   }
 
   return (
     <div className="app">
       <div className="container">
-        <div className="app__cards-container">
-          {arr.map((card) => (
-            <Card
-              key={card.id}
-              card={card}
-              handleOpenCard={handleOpenCard}
-            />
-          ))}
+        <div className="app__cards-wrapper">
+          <div className="app__cards-container">
+            {arr.map((card) => (
+              <Card
+                key={card.id}
+                card={card}
+                handleOpenCard={handleOpenCard}
+              />
+            ))}
+          </div>
         </div>
-        {isWinner ? <span>Вы победили!</span> : ''}
+        {openedCards.length === arr.length ? <span>Вы победили!</span> : ''}
         <button onClick={restart}>Начать заново</button>
       </div>
     </div>

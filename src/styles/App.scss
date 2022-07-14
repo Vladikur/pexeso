@@ -1,9 +1,16 @@
 .app {
 
-  &__cards-container {
+  &__cards-wrapper {
     margin-top: 10rem;
+
+    @include --mobile {
+      margin-top: 5rem;
+    }
+  }
+
+  &__cards-container {
+    margin: -0.5rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 }

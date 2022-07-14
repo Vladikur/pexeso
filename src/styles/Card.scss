@@ -1,8 +1,18 @@
 .card {
   position: relative;
-  width: 15rem;
+  width: calc(12.5% - 1rem);
   height: 25rem;
+  margin: 0.5rem;
   cursor: pointer;
+
+  @include --tablet {
+    height: 12rem;
+  }
+
+  @include --mobile {
+    width: calc(20% - 1rem);
+    height: 9rem;
+  }
 
   &__inner {
     position: absolute;
@@ -20,6 +30,11 @@
     border: solid 4px $color_main;
     border-radius: 2rem;
 
+    @include --tablet {
+      border-radius: 1rem;
+      border: solid 2px $color_main;
+    }
+
     &_front {
       background-color: aquamarine;
       transform: perspective(600px) rotateY(0deg);
@@ -35,6 +50,14 @@
       p {
         margin: 0;
         font-size: 15rem;
+
+        @include --tablet {
+          font-size: 10rem;
+        }
+
+        @include --mobile {
+          font-size: 8rem;
+        }
       }
 
       &_open {
