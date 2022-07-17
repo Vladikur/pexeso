@@ -11,7 +11,7 @@ const Card = ({card, handleOpenCard}) => {
     <div onClick={() => handleOpenCard(card)} className="card">
       <div className={cardFrontClassName}></div>
       <div className={cardBackClassName}>
-        <p>{card.cardContent}</p>
+          <img src ={card.cardContent} />
       </div>
     </div>
   );

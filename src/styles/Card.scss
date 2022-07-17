@@ -47,17 +47,10 @@
     &_back {
       transform: perspective(600px) rotateY(180deg);
 
-      p {
-        margin: 0;
-        font-size: 15rem;
-
-        @include --tablet {
-          font-size: 10rem;
-        }
-
-        @include --mobile {
-          font-size: 8rem;
-        }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
 
       &_open {
