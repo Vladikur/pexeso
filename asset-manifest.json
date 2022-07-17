@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pexeso/static/css/main.46ac41ea.css",
+    "main.js": "/pexeso/static/js/main.abc2bed9.js",
+    "index.html": "/pexeso/index.html",
+    "main.46ac41ea.css.map": "/pexeso/static/css/main.46ac41ea.css.map",
+    "main.abc2bed9.js.map": "/pexeso/static/js/main.abc2bed9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46ac41ea.css",
+    "static/js/main.abc2bed9.js"
+  ]
+}
