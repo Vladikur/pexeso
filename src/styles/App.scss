@@ -1,4 +1,9 @@
+body {
+  background: $color_backgraund;
+}
+
 .app {
+  height: 100vh;
 
   &__cards-wrapper {
     margin-top: 10rem;

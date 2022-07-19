@@ -9,9 +9,11 @@ const Card = ({card, handleOpenCard}) => {
 
   return (
     <div onClick={() => handleOpenCard(card)} className="card">
-      <div className={cardFrontClassName}></div>
+      <div className={cardFrontClassName}>
+          <img src ='https://i.pinimg.com/originals/2d/0f/79/2d0f796f4655baeca812ed1b7af9abf7.jpg' alt='#'/>
+      </div>
       <div className={cardBackClassName}>
-          <img src ={card.cardContent} />
+          <img src ={card.cardContent} alt='#'/>
       </div>
     </div>
   );

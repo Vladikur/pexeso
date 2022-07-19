@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Card from "./Card";
-import Timer from "./Timer";
+import Description from "./Description";
 import { shuffle } from '../utils/shuffle';
 import { cards } from '../constants/cards';
 
@@ -69,6 +69,7 @@ const App = () => {
 
   return (
     <div className="app">
+      <Description/>
       <div className="container">
         <div className="app__cards-wrapper">
           <div className="app__cards-container">
@@ -82,9 +83,7 @@ const App = () => {
           </div>
         </div>
         {openedCards.length === arr.length ? <span>Вы победили!</span> : ''}
-        <Timer
-            restart={restart}
-        />
+        <button onClick={restart}>Restart</button>
       </div>
     </div>
   );

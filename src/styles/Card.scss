@@ -29,12 +29,18 @@
     backface-visibility: hidden;
     transition: transform .5s linear;
     will-change: transform;
-    border: solid 4px $color_main;
+    border: solid 4px $color_card-border;
     border-radius: 2rem;
 
     @include --tablet {
       border-radius: 1rem;
-      border: solid 2px $color_main;
+      border: solid 2px $color_card-border;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     &_front {
@@ -48,12 +54,6 @@
 
     &_back {
       transform: perspective(600px) rotateY(180deg);
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
 
       &_open {
         transform: perspective(600px) rotateY(0deg);
