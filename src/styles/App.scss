@@ -12,5 +12,9 @@
     margin: -0.5rem;
     display: flex;
     flex-wrap: wrap;
+
+    @include --mobile {
+      margin: -2px;
+    }
   }
 }

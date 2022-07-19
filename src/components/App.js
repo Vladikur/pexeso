@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Card from "./Card";
+import Timer from "./Timer";
 import { shuffle } from '../utils/shuffle';
 import { cards } from '../constants/cards';
 
@@ -31,6 +32,7 @@ const App = () => {
   }, [openedCard1, openedCard2])
 
   const handleOpenCard = (clickCard) => {
+    if (openedCard1.id === clickCard.id) return
     if (!openedCard1.id) setOpenedCard1(clickCard)
     else setOpenedCard2(clickCard)
 
@@ -80,7 +82,9 @@ const App = () => {
           </div>
         </div>
         {openedCards.length === arr.length ? <span>Вы победили!</span> : ''}
-        <button onClick={restart}>Начать заново</button>
+        <Timer
+            restart={restart}
+        />
       </div>
     </div>
   );
