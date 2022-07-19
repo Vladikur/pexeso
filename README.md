@@ -7,6 +7,7 @@
 Переложение написано на React.js с использованием React Create App.
 
 ## Ссылка на GH Pages
+https://vladikur.github.io/pexeso/
 
 ### Запуск React приложения 
 1. Клонируйте репозиторий.
