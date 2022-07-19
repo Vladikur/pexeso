@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/pexeso/static/css/main.722c5e3f.css",
-    "main.js": "/pexeso/static/js/main.a2d43f89.js",
+    "main.css": "/pexeso/static/css/main.4b9403f1.css",
+    "main.js": "/pexeso/static/js/main.963f060c.js",
     "index.html": "/pexeso/index.html",
-    "main.722c5e3f.css.map": "/pexeso/static/css/main.722c5e3f.css.map",
-    "main.a2d43f89.js.map": "/pexeso/static/js/main.a2d43f89.js.map"
+    "main.4b9403f1.css.map": "/pexeso/static/css/main.4b9403f1.css.map",
+    "main.963f060c.js.map": "/pexeso/static/js/main.963f060c.js.map"
   },
   "entrypoints": [
-    "static/css/main.722c5e3f.css",
-    "static/js/main.a2d43f89.js"
+    "static/css/main.4b9403f1.css",
+    "static/js/main.963f060c.js"
   ]
 }
